@@ -19,7 +19,25 @@ enum custom_keycodes {
 // Fillers to make layering more clear
 #define _______ KC_TRNS
 #define XXXXXXX KC_NO
-#define EISU LALT(KC_GRV)
+
+//Alt + GRV
+#define AGRV LALT(KC_GRV)
+//英数
+//#define EISU LALT(KC_GRV)
+#define EISU KC_LANG2
+//かな
+//#define KANA LALT(KC_GRV)
+#define KANA KC_LANG1
+//変換
+#define HENK KC_INT4
+//無変換
+#define MHEN KC_INT5
+
+//左ファンクションキー
+#define LFUN AGRV
+//右ファンクションキー
+#define RFUN AGRV
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -33,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------+---------------------------+------+------+------+------+------+------+------|
    * | Shift|   Z  |   X  |   C  |   V  |   B  |  App |                    |Delete|   N  |   M  |   ,  |   .  |  Up  |  /   |
    * |-------------+------+------+------+------+------+------+------+------+------+------+------+------+------+-------------|
-   * |ADJUST|  GUI |  ALt | EISU |||||||| Lower| Space|      ||||||||      | Enter| Raise|||||||| EISU | Left | Down | Right|
+   * |ADJUST|  GUI |  ALt | LFUN |||||||| Lower| Space|      ||||||||      | Enter| Raise|||||||| RFUN | Left | Down | Right|
    * ,----------------------------------------------------------------------------------------------------------------------.
    */
   [_QWERTY] = LAYOUT( \
@@ -41,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_MINS,                        KC_EQL , KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_QUOT, \
     KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_GRV ,                        KC_BSLS, KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_ENT,  \
     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_APP ,                        KC_DEL , KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_UP,   KC_SLSH, \
-    ADJUST,  KC_LGUI, KC_LALT, EISU,             LOWER,   KC_SPC ,_______,        _______,KC_ENT , RAISE,            EISU,    KC_LEFT, KC_DOWN, KC_RGHT  \
+    ADJUST,  KC_LGUI, KC_LALT, LFUN,             LOWER,   KC_SPC ,_______,        _______,KC_ENT , RAISE,            RFUN,    KC_LEFT, KC_DOWN, KC_RGHT  \
   ),
 
   /* Lower
