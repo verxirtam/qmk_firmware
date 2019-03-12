@@ -22,11 +22,11 @@ enum custom_keycodes {
 
 //Alt + GRV
 #define AGRV LALT(KC_GRV)
+//Ctrl + Space
+#define CSPC LCTL(KC_SPC)
 //英数
-//#define EISU LALT(KC_GRV)
 #define EISU KC_LANG2
 //かな
-//#define KANA LALT(KC_GRV)
 #define KANA KC_LANG1
 //変換
 #define HENK KC_INT4
@@ -36,7 +36,7 @@ enum custom_keycodes {
 //左ファンクションキー
 #define LFUN AGRV
 //右ファンクションキー
-#define RFUN AGRV
+#define RFUN CSPC
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
