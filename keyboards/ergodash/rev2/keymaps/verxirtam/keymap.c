@@ -34,7 +34,7 @@ enum custom_keycodes {
 #define MHEN KC_INT5
 
 //左ファンクションキー
-#define LFUN AGRV
+#define LFUN CSPC
 //右ファンクションキー
 #define RFUN CSPC
 
