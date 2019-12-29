@@ -16,6 +16,8 @@ make preonic/rev3:verxirtam
 
 make crkbd:verxirtam
 
+make runner3680/5x8:verxirtam
+
 cp *.hex /mnt/LS-VL6D2/daisuke/documents/keyboad/qmk_firmware/
 
 ls -ltr /mnt/LS-VL6D2/daisuke/documents/keyboad/qmk_firmware/*.hex
