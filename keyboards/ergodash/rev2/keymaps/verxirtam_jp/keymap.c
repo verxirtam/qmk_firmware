@@ -35,9 +35,9 @@ enum custom_keycodes {
 #define MHEN KC_INT5
 
 //左ファンクションキー
-#define LFUN CSPC
+#define LFUN EISU
 //右ファンクションキー
-#define RFUN CSPC
+#define RFUN HENK
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -56,10 +56,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * ,----------------------------------------------------------------------------------------------------------------------.
    */
   [_QWERTY] = LAYOUT( \
-    KC_ESC,  KC_1,    UJ_2,    KC_3,    KC_4,    KC_5,    KC_LBRC,                        KC_RBRC, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, \
-    KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_MINS,                        KC_EQL , KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_QUOT, \
-    KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_GRV ,                        KC_BSLS, KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_ENT,  \
-    KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_APP ,                        KC_DEL , KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_UP,   KC_SLSH, \
+    KC_ESC,  KC_1,    UJ_2,    KC_3,    KC_4,    KC_5,    JP_LBRC,                        JP_RBRC, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, \
+    KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    JP_MINS,                        JP_EQL , KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    JP_QUOT, \
+    KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    JP_GRV ,                        JP_BSLS, KC_H,    KC_J,    KC_K,    KC_L,    JP_SCLN, KC_ENT,  \
+    KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_APP ,                        KC_DEL , KC_N,    KC_M,    JP_COMM, JP_DOT,  KC_UP,   JP_SLSH, \
     ADJUST,  KC_LGUI, KC_LALT, LFUN,             LOWER,   KC_SPC ,_______,        _______,KC_ENT , RAISE,            RFUN,    KC_LEFT, KC_DOWN, KC_RGHT  \
   ),
 
@@ -77,10 +77,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * ,----------------------------------------------------------------------------------------------------------------------.
    */
   [_LOWER] = LAYOUT(
-    KC_F11,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_LCBR,                        KC_RCBR, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F12,  \
-    _______, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_UNDS,                        KC_PLUS, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_DQT,  \
-    _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_TILD,                        KC_PIPE, KC_H,    KC_UNDS, KC_PLUS, KC_L,    KC_COLN, _______, \
-    _______, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______,                        _______, KC_N,    KC_M,    KC_LT,   KC_GT,   KC_PGUP, KC_QUES, \
+    KC_F11,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   JP_LCBR,                        JP_RCBR, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F12,  \
+    _______, JP_EXLM, JP_AT,   JP_HASH, JP_DLR,  JP_PERC, JP_UNDS,                        JP_PLUS, JP_CIRC, JP_AMPR, JP_ASTR, JP_LPRN, JP_RPRN, JP_DQT,  \
+    _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    JP_TILD,                        JP_PIPE, KC_H,    JP_UNDS, JP_PLUS, KC_L,    JP_COLN, _______, \
+    _______, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______,                        _______, KC_N,    KC_M,    JP_LT,   JP_GT,   KC_PGUP, JP_QUES, \
     _______, _______, _______, _______,          _______, _______,_______,        _______,_______, _______,          _______, KC_HOME, KC_PGDN, KC_END   \
   ),
 
@@ -98,10 +98,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * ,----------------------------------------------------------------------------------------------------------------------.
    */
   [_RAISE] = LAYOUT(
-    KC_F11,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_LCBR,                        KC_RCBR, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F12,  \
-    _______, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_UNDS,                        KC_PLUS, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_DQT,  \
-    _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_TILD,                        KC_PIPE, KC_H,    KC_MINS, KC_EQL,  KC_L,    KC_COLN, _______, \
-    _______, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______,                        _______, KC_N,    KC_M,    KC_LT,   KC_GT,   KC_PGUP, KC_QUES, \
+    KC_F11,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   JP_LCBR,                        JP_RCBR, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F12,  \
+    _______, JP_EXLM, JP_AT,   JP_HASH, JP_DLR,  JP_PERC, JP_UNDS,                        JP_PLUS, JP_CIRC, JP_AMPR, JP_ASTR, JP_LPRN, JP_RPRN, JP_DQT,  \
+    _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    JP_TILD,                        JP_PIPE, KC_H,    JP_MINS, JP_EQL,  KC_L,    JP_COLN, _______, \
+    _______, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______,                        _______, KC_N,    KC_M,    JP_LT,   JP_GT,   KC_PGUP, JP_QUES, \
     _______, _______, _______, _______,          _______, _______,_______,        _______,_______, _______,          _______, KC_HOME, KC_PGDN, KC_END   \
 ),
 
